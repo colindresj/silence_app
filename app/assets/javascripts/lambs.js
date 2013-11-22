@@ -41,6 +41,6 @@ function wakeUpLamb(lambNode){
     type: 'put',
     context: lambNode,
     dataType: 'json',
-    data: dataContent
+    data: { lamb: dataContent }
   });
 }

@@ -15,7 +15,9 @@ class LambsController < ApplicationController
   end
 
   def update
-    @lamb = Lamb.find params[:id]
+    @lamb = Lamb.find params[:lamb][:id]
+    @lamb.is_silent = params[:lamb][:is_silent]
+    @lamb.save
     render :json => @lamb
   end
 end

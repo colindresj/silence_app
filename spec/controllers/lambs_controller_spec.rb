@@ -41,10 +41,12 @@ describe LambsController do
 
     it { should respond_with(:success) }
 
-    it "finds the lamb" do
+    it "finds the lamb and wakes it up in the db" do
       lamb = Lamb.create
-      json = { :format => 'json', id: lamb.id, :lamb => {} }
+      lamb.is_silent = true
+      json = { :format => 'json', id: lamb.id, :lamb => lamb }
       put :update, json
+      expect(assigns(:lamb).to_json).to eq(lamb.to_json)
     end
 
     it "responds with the updated lamb as json" do
