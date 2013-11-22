@@ -16,14 +16,14 @@ describe("person", function(){
     person.applyLotion();
 
     expect(lotion.squeeze).toHaveBeenCalled();
-    expect(person.isLotioned()).toBe(true);
+    expect(person.isLotioned).toBe(true);
     expect(lotion.ounces).toBeLessThan(32);
   });
 
   it("places the lotion in the basket", function(){
     person.place(lotion, basket);
 
-    expect(person.hasLotion()).toBe(false);
+    expect(person.hasLotion).toBe(false);
     expect(basket.contains(lotion)).toBe(true);
   });
 

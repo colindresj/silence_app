@@ -1,5 +1,6 @@
-function Lotion(){
-  this.ounces = 32;
+function Lotion(options){
+  this.brand = options.brand;
+  this.ounces = options.ounces;
 }
 
 Lotion.prototype.squeeze = function() {
