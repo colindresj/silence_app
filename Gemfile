@@ -7,6 +7,27 @@ gem 'rails', '3.2.14'
 
 gem 'pg'
 
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'jasmine'
+  gem 'shoulda-matchers'
+  gem 'simplecov', :require => false
+  gem 'guard-rails'
+  gem 'guard-livereload'
+  gem 'guard-rspec', :require => false
+  # gem 'guard-livereload'
+  gem 'pry-rails'
+  gem 'pry-debugger'
+  gem 'pry-stack_explorer'
+  gem 'annotate'
+  gem 'quiet_assets' # Turns off the Rails asset pipeline log
+  gem 'better_errors'
+  gem 'binding_of_caller' # Advanced features for better_errors (REPL, pretty stack, etc.)
+  gem 'meta_request' # Supporting gem for Rails Panel
+  gem 'rails-erd'
+  gem 'awesome_print'
+end
+
 
 # Gems used only for assets and not required
 # in production environments by default.

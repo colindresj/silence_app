@@ -9,6 +9,11 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
+if Rails.env.test?
+    require 'simplecov'
+    SimpleCov.start
+end
+
 module SilenceApp
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.

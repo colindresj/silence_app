@@ -1,0 +1,2 @@
+module LambsHelper
+end
