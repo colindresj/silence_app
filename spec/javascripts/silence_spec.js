@@ -8,7 +8,7 @@ describe("person", function(){
   it("takes the lotion", function(){
     person.take(lotion);
 
-    expect(person.hasLotion()).toBe(true);
+    expect(person.hasLotion).toBe(true);
   });
 
   it("rubs the lotion on its skin", function(){
@@ -17,7 +17,7 @@ describe("person", function(){
 
     expect(lotion.squeeze).toHaveBeenCalled();
     expect(person.isLotioned()).toBe(true);
-    expect(lotion.ounces).toBeLessThan(32)
+    expect(lotion.ounces).toBeLessThan(32);
   });
 
   it("places the lotion in the basket", function(){
